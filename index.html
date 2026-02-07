@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marie & Ferdinand – Unsere Hochzeit</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f5f0;      /* eggshell */
+      --text: #3f3a36;
+      --accent: #8f6f5e; /* floral warm brown */
+      --soft: #e6dfd6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      position: relative;
+    }
+
+    /* Floral corners */
+    .corner {
+      position: absolute;
+      width: 120px;
+      opacity: 0.15;
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 1.2;
+    }
+
+    .corner.top-left {
+      top: 0;
+      left: 0;
+    }
+
+    .corner.bottom-right {
+      bottom: 0;
+      right: 0;
+      transform: rotate(180deg);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .date {
+      font-size: 1.1rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 600px;
+    }
+
+    .info-box {
+      background: #ffffffaa;
+      border: 1px solid var(--soft);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--accent),
+        transparent
+      );
+      margin: 4rem 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b625b;
+      margin-top: 6rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      .corner {
+        width: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Floral SVG corner -->
+    <svg class="corner top-left" viewBox="0 0 100 100">
+      <path d="M10 90 C20 60, 40 40, 70 30" />
+      <path d="M20 80 C30 55, 55 35, 85 25" />
+      <circle cx="68" cy="32" r="2" />
+      <circle cx="42" cy="48" r="2" />
+    </svg>
+
+    <svg class="corner bottom-right" viewBox="0 0 100 100">
+      <path d="M10 90 C20 60, 40 40, 70 30" />
+      <path d="M20 80 C30 55, 55 35, 85 25" />
+      <circle cx="68" cy="32" r="2" />
+      <circle cx="42" cy="48" r="2" />
+    </svg>
+
+    <header>
+      <h1>Marie & Ferdinand</h1>
+      <div class="date">27. Juni 2026 · Meeder</div>
+    </header>
+
+    <section>
+      <h2>Willkommen</h2>
+      <p>
+        Wir freuen uns sehr, diesen besonderen Tag gemeinsam mit euch zu feiern.
+        Auf dieser Seite findet ihr alle wichtigen Informationen zu unserer Hochzeit.
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Die Feier</h2>
+      <div class="info-box">
+        <p><strong>Datum:</strong> 27. Juni 2026</p>
+        <p><strong>Location:</strong> Scheune von Johann</p>
+        <p><strong>Ort:</strong> Meeder</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Anreise & Unterkunft</h2>
+      <p>
+        Weitere Informationen zu Anreise und Übernachtungsmöglichkeiten
+        folgen in Kürze.
+      </p>
+    </section>
+
+    <section>
+      <h2>Geschenke</h2>
+      <p>
+        Eure Anwesenheit ist das schönste Geschenk.
+        Wer uns darüber hinaus eine Freude machen möchte, begleitet uns gern auf unserem gemeinsamen Weg.
+      </p>
+    </section>
+
+    <footer>
+      Mit Liebe gestaltet · Marie & Ferdinand
+    </footer>
+  </div>
+</body>
+</html>
