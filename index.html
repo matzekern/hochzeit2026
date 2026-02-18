@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
   <title>Marie & Ferdinand – Unsere Hochzeit</title>
 
-
-
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #f7f5f0;      /* eggshell */
+      --bg: #f7f5f0;
       --text: #3f3a36;
-      --accent: #8f6f5e; /* floral warm brown */
+      --accent: #8f6f5e;
       --soft: #e6dfd6;
     }
 
@@ -32,65 +29,44 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem;
-      position: relative;
-    }
-
-    /* Floral corners */
-    .corner {
-      position: absolute;
-      width: 120px;
-      opacity: 0.15;
-      fill: none;
-      stroke: var(--accent);
-      stroke-width: 1.2;
-    }
-
-    .corner.top-left {
-      top: 0;
-      left: 0;
-    }
-
-    .corner.bottom-right {
-      bottom: 0;
-      right: 0;
-      transform: rotate(180deg);
-    }
-
-    header {
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
       text-align: center;
-      margin-bottom: 5rem;
+      margin-bottom: 1rem;
     }
 
     h1 {
-      font-family: "Playfair Display", serif;
       font-size: 3rem;
-      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
     }
 
     .date {
       font-size: 1.1rem;
       color: var(--accent);
       letter-spacing: 0.05em;
-    }
-
-    section {
+      text-align: center;
       margin-bottom: 4rem;
     }
 
-    h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    p {
+      margin-bottom: 1.5rem;
     }
 
-    p {
-      max-width: 600px;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 8px;
     }
 
     .info-box {
@@ -103,12 +79,7 @@
 
     .divider {
       height: 1px;
-      background: linear-gradient(
-        to right,
-        transparent,
-        var(--accent),
-        transparent
-      );
+      background: linear-gradient(to right, transparent, var(--accent), transparent);
       margin: 4rem 0;
     }
 
@@ -119,149 +90,125 @@
       margin-top: 6rem;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.4rem;
-      }
+    /* Floral SVG corners */
+    .corner {
+      position: absolute;
+      width: 120px;
+      opacity: 0.15;
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 1.2;
+    }
 
-      .corner {
-        width: 80px;
-      }
+    .corner.top-left { top: 0; left: 0; }
+    .corner.bottom-right { bottom: 0; right: 0; transform: rotate(180deg); }
+
+    /* Hero-Bild optional */
+    .hero {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.4rem; }
+      h2 { font-size: 1.6rem; }
+      .corner { width: 80px; }
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
 
-    <!-- Floral SVG corner -->
-    <svg class="corner top-left" viewBox="0 0 100 100">
-      <path d="M10 90 C20 60, 40 40, 70 30" />
-      <path d="M20 80 C30 55, 55 35, 85 25" />
-      <circle cx="68" cy="32" r="2" />
-      <circle cx="42" cy="48" r="2" />
-    </svg>
+  <!-- Floral SVG corners -->
+  <svg class="corner top-left" viewBox="0 0 100 100">
+    <path d="M10 90 C20 60, 40 40, 70 30" />
+    <path d="M20 80 C30 55, 55 35, 85 25" />
+    <circle cx="68" cy="32" r="2" />
+    <circle cx="42" cy="48" r="2" />
+  </svg>
 
-    <svg class="corner bottom-right" viewBox="0 0 100 100">
-      <path d="M10 90 C20 60, 40 40, 70 30" />
-      <path d="M20 80 C30 55, 55 35, 85 25" />
-      <circle cx="68" cy="32" r="2" />
-      <circle cx="42" cy="48" r="2" />
-    </svg>
+  <svg class="corner bottom-right" viewBox="0 0 100 100">
+    <path d="M10 90 C20 60, 40 40, 70 30" />
+    <path d="M20 80 C30 55, 55 35, 85 25" />
+    <circle cx="68" cy="32" r="2" />
+    <circle cx="42" cy="48" r="2" />
+  </svg>
 
-
-    <img src="https://github.com/matzekern/hochzeit2026/blob/main/-09.jpg?raw=true"
-     style="max-width:100%; height:auto;">
-
-     <style>
-    /* Alle Texte max 700px breit, zentriert */
-    body {
-      max-width: 700px;    /* maximale Breite */
-      margin: auto;        /* zentriert */
-      padding: 20px;       /* Abstand vom Rand */
-      font-family: Arial, sans-serif; /* angenehme Schrift */
-      line-height: 1.6;    /* besser lesbar */
-    }
-
-    h1, h2, h3 {
-      text-align: center;  /* Überschriften zentrieren */
-    }
-
-    img {
-      max-width: 100%;     /* Bilder passen sich an */
-      height: auto;
-      display: block;
-      margin: 20px auto;   /* zentriert mit Abstand oben/unten */
-    }
-  </style>
-
-    
-    <header>
-      <h1>Marie & Ferdinand</h1>
-      <div class="date">27. Juni 2026 · Meeder</div>
-    </header>
-
-    <section>
-      <h2>Willkommen</h2>
-      <p>
-        Seit dem 12.12.2025 sind wir verheiratet. Jetzt wollen wir das noch richtig mit euch feiern!
-        <p>&nbsp;</p>
-        Auf dieser Seite findet ihr alle wichtigen Informationen zu unserer Hochzeit. 
-        Wir werden sie konstant updaten. Wenn ihr sonst Fragen habt, schreibt gern Marie: marie.kern@posteo.de & 015756402278.
-      </p>
-    </section>
-
-    <div class="divider"></div>
-
-    <section>
-      <h2>Wichtigste Infos</h2>
-      <div class="info-box">
-        <p><strong>Datum:</strong> 27. Juni 2026</p>
-        <p><strong>Adresse:</strong> Kleinwalburer Str. 13  <a href="https://maps.app.goo.gl/An9Q8Gh149vd9cFN7" target="_blank" rel="noopener">Google Maps</a>.
-        <p><strong>Ort:</strong> 96484 Meeder</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Ablauf</h2>
-<ul>
-<li>14:00 Ankommen (Es gibt Snacks)</li>
-<li>14:30 Trauung</li>
-<li>15:00 Sektempfang</li>
-<li>15:30 Kaffee und Kuchen
-<ul>
-<li>Wir freuen uns &uuml;ber Beitr&auml;ge zum Kuchenbuffet</li>
-</ul>
-</li>
-<li>ab 16:00 Spiel und Spa&szlig;</li>
-<li>18:30 Abendessen</li>
-<li>20:00 Spiel und Spa&szlig; und Tanzen</li>
-</ul>
-      
-  </section>
-    
-    <section>
-      <h2>Anreise</h2>
-      <p>
-        Wir empfehlen die Anreise nach Meeder mit dem Zug. Der Bahnhof ist nur fünf Minuten zu Fuß entfernt und der Zug fährt bis 00:30 Uhr am 28.06. (oder wieder ab halb sieben <img src="https://html-online.com/editorfiles/tiny/plugins/emoticons/img/smiley-wink.gif" alt="wink" />)
-        <p>&nbsp;</p>
-        Alternativ überlegen wir abends auch einen Taxiservice zu organisieren.
-        Die Anreise mit dem Auto geht natürlich aus. Über die besten Parkmöglichkeiten informieren wir euch hier noch.
-
-        
-      </p>
-    </section>
-
-    <section>
-      <h2>Unterkunft</h2>
-      <p>
-        In und um Meeder gibt es zahlreiche Ferienwohnungen und -häuser. Außerdem ist Coburg nicht weit entfernt, wo es diverse Hotels gibt.
-        Am besten sucht ihr euch etwas entlang der Zuglininie: <a href="https://www.agilis.de/wp-content/uploads/2023/05/RB18_Coburg-Bad-Rodach.pdf" target="_blank" rel="noopener">Fahrplan Agilis RB 18</a>.
-
-        
-      </p>
-    </section>
-
-    <section>
-      <h2>Geschenke</h2>
-      <p>
-        Eure Anwesenheit ist das schönste Geschenk.
-        Wir freuen uns aber über einem Beitrag zu unserer Hochzeitsreise nach Neuseeland.
-        <p>&nbsp;</p>
-        Außerdem würden wir uns freuen, wenn ihr einen Beitrag zu unserem Kuchenbuffet mitbringen könntet. Wir verstehen natürlich, dass das nicht für alle möglich sein wird, also bitte fühlt euch nicht verpflichtet. Wenn ihr etwas mitbringen könnt, gebt gern Marie Bescheid.
-      </p>
-    </section>
-
-    
-    <section>
-      <h2>Rückmeldung</h2>
-      <p>
-        Gibt uns gern bis zum <strong>31.Mai</strong> Bescheid ob ihr noch jemanden mitbringen wollt oder wenn ihr leider nicht kommen könnt.
-      </p>
-    </section>
-
-    <footer>
-      Mit Liebe, Google und ChatGPT gestaltet · Marie & Ferdinand
-    </footer>
+  <!-- Header / Hero -->
+  <div class="hero">
+    <img src="https://github.com/matzekern/hochzeit2026/blob/main/-09.jpg?raw=true" alt="Marie & Ferdinand">
+    <h1>Marie & Ferdinand</h1>
+    <div class="date">27. Juni 2026 · Meeder</div>
   </div>
+
+  <!-- Willkommen -->
+  <section>
+    <h2>Willkommen</h2>
+    <p>Seit dem 12.12.2025 sind wir verheiratet. Jetzt wollen wir das noch richtig mit euch feiern!</p>
+    <p>Auf dieser Seite findet ihr alle wichtigen Informationen zu unserer Hochzeit. Wir werden sie konstant updaten. Wenn ihr Fragen habt, schreibt gern Marie: <a href="mailto:marie.kern@posteo.de">marie.kern@posteo.de</a> oder ruft unter 015756402278 an.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Wichtigste Infos -->
+  <section>
+    <h2>Wichtigste Infos</h2>
+    <div class="info-box">
+      <p><strong>Datum:</strong> 27. Juni 2026</p>
+      <p><strong>Adresse:</strong> Kleinwalburer Str. 13, <a href="https://maps.app.goo.gl/An9Q8Gh149vd9cFN7" target="_blank" rel="noopener">Google Maps</a></p>
+      <p><strong>Ort:</strong> 96484 Meeder</p>
+    </div>
+  </section>
+
+  <!-- Ablauf -->
+  <section>
+    <h2>Ablauf</h2>
+    <ul>
+      <li>14:00 Ankommen (Es gibt Snacks)</li>
+      <li>14:30 Trauung</li>
+      <li>15:00 Sektempfang</li>
+      <li>15:30 Kaffee und Kuchen
+        <ul>
+          <li>Wir freuen uns über Beiträge zum Kuchenbuffet</li>
+        </ul>
+      </li>
+      <li>ab 16:00 Spiel und Spaß</li>
+      <li>18:30 Abendessen</li>
+      <li>20:00 Spiel, Spaß & Tanzen</li>
+    </ul>
+  </section>
+
+  <!-- Anreise -->
+  <section>
+    <h2>Anreise</h2>
+    <p>Wir empfehlen die Anreise nach Meeder mit dem Zug. Der Bahnhof ist nur fünf Minuten zu Fuß entfernt. Der Zug fährt bis 00:30 Uhr am 28.06. oder wieder ab halb sieben 😉</p>
+    <p>Alternativ überlegen wir abends auch einen Taxiservice zu organisieren. Die Anreise mit dem Auto ist natürlich auch möglich. Über die besten Parkmöglichkeiten informieren wir euch hier noch.</p>
+  </section>
+
+  <!-- Unterkunft -->
+  <section>
+    <h2>Unterkunft</h2>
+    <p>In und um Meeder gibt es zahlreiche Ferienwohnungen und -häuser. Außerdem ist Coburg nicht weit entfernt, wo es diverse Hotels gibt. Am besten sucht ihr euch etwas entlang der Zuglinie: <a href="https://www.agilis.de/wp-content/uploads/2023/05/RB18_Coburg-Bad-Rodach.pdf" target="_blank" rel="noopener">Fahrplan Agilis RB 18</a>.</p>
+  </section>
+
+  <!-- Geschenke -->
+  <section>
+    <h2>Geschenke</h2>
+    <p>Eure Anwesenheit ist das schönste Geschenk. Wir freuen uns aber über Beiträge zu unserer Hochzeitsreise nach Neuseeland.</p>
+    <p>Außerdem würden wir uns freuen, wenn ihr einen Beitrag zu unserem Kuchenbuffet mitbringen könntet. Bitte fühlt euch nicht verpflichtet – gebt gern Marie Bescheid, wenn ihr etwas mitbringen möchtet.</p>
+  </section>
+
+  <!-- Rückmeldung -->
+  <section>
+    <h2>Rückmeldung</h2>
+    <p>Gibt uns gern bis zum <strong>31. Mai</strong> Bescheid, ob ihr noch jemanden mitbringen wollt oder wenn ihr leider nicht kommen könnt.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Mit Liebe gestaltet · Marie & Ferdinand ❤️</p>
+  </footer>
+
 </body>
 </html>
