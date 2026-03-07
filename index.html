@@ -115,6 +115,47 @@
       h2 { font-size: 1.6rem; }
       .corner { width: 80px; }
     }
+    .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox:target {
+  display: flex;
+}
   </style>
 </head>
 
@@ -207,6 +248,42 @@
     <h2>Rückmeldung</h2>
     <p>Gebt uns bitte bis zum <strong>15. Mai</strong> Bescheid, ob ihr noch jemanden mitbringen wollt oder wenn ihr leider nicht kommen könnt.</p>
   </section>
+
+  <section>
+
+  <div class="gallery">
+
+    <a href="#img1"><img src="-01-2.jpg" alt=""></a>
+    <a href="#img2"><img src="-01-3.jpg" alt=""></a>
+    <a href="#img3"><img src="-01-4.jpg" alt=""></a>
+    <a href="#img4"><img src="-01-5.jpg" alt=""></a>
+    <a href="#img5"><img src="-01-6.jpg" alt=""></a>
+    <a href="#img6"><img src="-01-7.jpg" alt=""></a>
+    <a href="#img7"><img src="-01-8.jpg" alt=""></a>
+    <a href="#img8"><img src="-01.jpg" alt=""></a>
+    <a href="#img9"><img src="IMG_4763.JPG" alt=""></a>
+    <a href="#img10"><img src="IMG_5203.jpeg" alt=""></a>
+    <a href="#img11"><img src="IMG_6100 2.jpeg" alt=""></a>
+    <a href="#img12"><img src="IMG_6100.jpeg" alt=""></a>
+    <a href="#img13"><img src="IMG_6151.jpeg" alt=""></a>
+   
+  </div>
+</section>
+
+  <div id="img1" class="lightbox"><a href="#"><img src="-01-2.jpg"></a></div>
+<div id="img2" class="lightbox"><a href="#"><img src="-01-3.jpg"></a></div>
+<div id="img3" class="lightbox"><a href="#"><img src="-01-4.jpg"></a></div>
+<div id="img4" class="lightbox"><a href="#"><img src="-01-5.jpg"></a></div>
+<div id="img5" class="lightbox"><a href="#"><img src="-01-6.jpg"></a></div>
+<div id="img6" class="lightbox"><a href="#"><img src="-01-7.jpg"></a></div>
+<div id="img7" class="lightbox"><a href="#"><img src="-01-8.jpg"></a></div>
+<div id="img8" class="lightbox"><a href="#"><img src="-01.jpg"></a></div>
+<div id="img9" class="lightbox"><a href="#"><img src="IMG_4763.JPG"></a></div>
+<div id="img10" class="lightbox"><a href="#"><img src="IMG_5203.jpeg"></a></div>
+<div id="img11" class="lightbox"><a href="#"><img src="IMG_6100 2.jpeg"></a></div>
+<div id="img12" class="lightbox"><a href="#"><img src="IMG_6100.jpeg"></a></div>
+<div id="img13" class="lightbox"><a href="#"><img src="IMG_6151.jpeg"></a></div>
+
 
   <!-- Footer -->
   <footer>
